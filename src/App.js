@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import styled from "styled-components";
+import HomePage from "./components/homepage";
+import MemberShip from "./components/membership";
+import { KYC } from "./components/membership/KYC";
+import PhoneNumber from "./components/phoneNumber";
+import { PhoneNo } from "./components/phoneNumber/phoneNo";
+import Verify from "./components/verify";
 
-function App() {
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: ${(props) => props.colr};
+`;
+
+const App = () => {
+  const { pathname } = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container colr={pathname === "/" ? "#4D7CF3" : "#ffffff"}>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/phone" element={<PhoneNumber />}>
+            <Route index element={<PhoneNo />} />
+            <Route path="verify" element={<Verify />} />
+          </Route>
+          <Route path="/member" element={<MemberShip />}>
+            <Route index element={<KYC />} />
+          </Route>
+        </Routes>
+      </Container>
+    </>
   );
-}
+};
 
 export default App;
