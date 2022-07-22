@@ -7,6 +7,7 @@ import {
   TextTypo,
   TextTypo2,
 } from "../../shared/components/utility";
+import LOGO from "../../asset/logo4.png";
 
 const Flex = styled(Spacer)`
   display: flex;
@@ -32,7 +33,13 @@ const CPlaceholder = styled(Placeholder)`
   align-items: center;
   justify-content: center;
 `;
-
+const Image = styled.img`
+  width: 100%;
+  height: 127px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+`;
 export const Confirmation = () => {
   let navigate = useNavigate();
   function handleNavigation() {
@@ -70,6 +77,7 @@ export const Confirmation = () => {
           Add membership for a family member
         </TextTypo>
       </CPlaceholder>
+      <Image src={LOGO} alt="lof" />
     </Flex1>
   );
 };

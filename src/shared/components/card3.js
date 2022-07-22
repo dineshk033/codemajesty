@@ -14,7 +14,7 @@ const CardContainer = styled(CardEffect1)`
 `;
 export const Card3 = ({ color }) => {
   return (
-    <CardContainer width="326px" height="171px" color={color}>
+    <CardContainer width="80vw" height="171px" color={color}>
       <TextTypo1 weight="500" color="#414D55" width="160px" height="17px">
         Platinum Membership
       </TextTypo1>

@@ -4,7 +4,7 @@ import { Card3 } from "../../shared/components/card3";
 import { Placeholder } from "../../shared/components/input";
 import { Spacer } from "../../shared/components/spacer";
 import { TextTypo, TextTypo2 } from "../../shared/components/utility";
-
+import LOGO3 from "../../asset/logo3.png";
 const Container = styled.div`
   padding: 65px 30px 10px;
   display: flex;
@@ -13,10 +13,10 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const Block = styled.div`
+const Image = styled.img`
   width: 170px;
   height: 60px;
-  background-color: #e3ebff;
+  margin-bottom: 20px;
 `;
 const CPlaceholder = styled(Placeholder)`
   display: flex;
@@ -49,7 +49,7 @@ export const Payment = () => {
     <Container>
       <Card3 />
       <Spacer margin="40px 0 0 0" />
-      <Block />
+      <Image src={LOGO3} alt="Logo" />
       {DATA.map((text) => (
         <SubCard text={text} key={text} />
       ))}
