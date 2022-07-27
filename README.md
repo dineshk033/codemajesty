@@ -2,9 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Based on below wireframce Application has been created
+
 ## Available Scripts
 
 In the project directory, you can run:
+![wireframe](https://user-images.githubusercontent.com/16112005/181218241-17a21d70-fc8f-45b2-a299-bcc330efcaaa.jpg)
 
 ### `npm start`
 
